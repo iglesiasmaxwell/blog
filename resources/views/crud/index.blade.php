@@ -3,46 +3,28 @@
 
 <div class="bg-gray-300 min-h-screen">
     <div class="max-w-7xl mx-auto bg-white flex flex-col px-10 py-5 min-h-screen gap-10">
-        <div class="">
-            <h1 class="text-lg font-semibold mb-2">
-                Judul
-            </h1>
-            <span class="text-sm px-6">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta harum eum omnis quidem id consequuntur ratione culpa provident? Voluptatibus dolorem consequatur explicabo magnam tempore qui rem, eaque fugit quos labore harum ipsa dolore similique quidem exercitationem inventore molestiae sint a, nobis dolorum placeat! Molestiae cum sequi nobis adipisci aut? Quam?
-            </span>
-        </div>
-        <div class="">
-            <h1 class="text-lg font-semibold mb-2">
-                Judul
-            </h1>
-            <span class="text-sm px-6">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta harum eum omnis quidem id consequuntur ratione culpa provident? Voluptatibus dolorem consequatur explicabo magnam tempore qui rem, eaque fugit quos labore harum ipsa dolore similique quidem exercitationem inventore molestiae sint a, nobis dolorum placeat! Molestiae cum sequi nobis adipisci aut? Quam?
-            </span>
-        </div>
-        <div class="">
-            <h1 class="text-lg font-semibold mb-2">
-                Judul
-            </h1>
-            <span class="text-sm px-6">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta harum eum omnis quidem id consequuntur ratione culpa provident? Voluptatibus dolorem consequatur explicabo magnam tempore qui rem, eaque fugit quos labore harum ipsa dolore similique quidem exercitationem inventore molestiae sint a, nobis dolorum placeat! Molestiae cum sequi nobis adipisci aut? Quam?
-            </span>
-        </div>
-        <div class="">
-            <h1 class="text-lg font-semibold mb-2">
-                Judul
-            </h1>
-            <span class="text-sm px-6">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta harum eum omnis quidem id consequuntur ratione culpa provident? Voluptatibus dolorem consequatur explicabo magnam tempore qui rem, eaque fugit quos labore harum ipsa dolore similique quidem exercitationem inventore molestiae sint a, nobis dolorum placeat! Molestiae cum sequi nobis adipisci aut? Quam?
-            </span>
-        </div>
-        <div class="">
-            <h1 class="text-lg font-semibold mb-2">
-                Judul
-            </h1>
-            <span class="text-sm px-6">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta harum eum omnis quidem id consequuntur ratione culpa provident? Voluptatibus dolorem consequatur explicabo magnam tempore qui rem, eaque fugit quos labore harum ipsa dolore similique quidem exercitationem inventore molestiae sint a, nobis dolorum placeat! Molestiae cum sequi nobis adipisci aut? Quam?
-            </span>
-        </div>
+        <table class="bg-gray-100">
+            <tr>
+                <th class="px-4 py-2 border">No</th>
+                <th class="px-4 py-2 border">Judul</th>
+                <th class="px-4 py-2 border">Konten</th>
+                <th class="px-4 py-2 border">Aksi</th>
+            </tr>
+            <tr>
+                @forelse ($konten as $index => $item)
+                <th class="px-4 py-2 border">{{ $index + 1 }}</th>
+                <th class="px-4 py-2 border">{{ $item->judul }}</th>
+                <th class="px-4 py-2 border">{{ $item->konten }}</th>
+                <th class="px-4 py-2 border">
+                    <div>
+                        <a href="">Edit</a>
+                        <a href="">Delete</a>
+                    </div>
+                </th>
+                @empty
+                <th colspan="12" class="px-4 py-2 border text-center">Tidak Ada Konten</td>
+                @endforelse
+            </tr>
     </div>
 </div>
 
