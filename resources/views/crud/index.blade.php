@@ -1,7 +1,7 @@
 @extends('layout')
 @section('content')
 
-<div class="bg-gray-300 min-h-screen">
+<div class="bg-gradient-to-br from-gray-200 to-gray-600 min-h-screen">
     <div class="max-w-7xl mx-auto bg-white flex flex-col px-10 py-5 min-h-screen gap-10">
         <table class="my-6 mx-6 bg-gradient-to-tr from-slate-100 to-zinc-200">
             <tr>
