@@ -12,10 +12,10 @@
             </tr>
             @forelse ($konten as $index => $item)
             <tr>
-                <th class="px-4 py-2 border">{{ $index + 1 }}</th>
-                <th class="px-4 py-2 border">{{ $item->judul }}</th>
-                <th class="px-4 py-2 border">{{ $item->konten }}</th>
-                <th class="px-4 py-2 border">
+                <th class="px-4 py-2 border border-gray-400">{{ $index + 1 }}</th>
+                <th class="px-4 py-2 border border-gray-400">{{ $item->judul }}</th>
+                <th class="px-4 py-2 border border-gray-400">{{ $item->konten }}</th>
+                <th class="px-4 py-2 border border-gray-400">
                     <div>
                         <a href="">Edit</a>
                         <a href="">Delete</a>
