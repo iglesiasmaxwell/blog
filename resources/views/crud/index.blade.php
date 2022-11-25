@@ -10,8 +10,8 @@
                 <th class="px-4 py-2 border border-gray-400">Konten</th>
                 <th class="px-4 py-2 border border-gray-400">Aksi</th>
             </tr>
+            @forelse ($konten as $index => $item)
             <tr>
-                @forelse ($konten as $index => $item)
                 <th class="px-4 py-2 border">{{ $index + 1 }}</th>
                 <th class="px-4 py-2 border">{{ $item->judul }}</th>
                 <th class="px-4 py-2 border">{{ $item->konten }}</th>
