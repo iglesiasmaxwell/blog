@@ -3,7 +3,7 @@
         <a class="hover:ring-sky-600 ring-1 hover:text-white px-4 py-2 rounded-md cursor-pointer" href="/blog">
             Konten
         </a>
-        <a class="hover:ring-sky-600 ring-1 bg-clip-text hover:text-white px-4 py-2 rounded-md cursor-pointer" href="{{ route('crud.index') }}">
+        <a class="hover:ring-sky-600 ring-1 hover:text-white px-4 py-2 rounded-md cursor-pointer" href="{{ route('crud.index') }}">
             {{-- href="/crud/index" --}}
             Crud
         </a>
